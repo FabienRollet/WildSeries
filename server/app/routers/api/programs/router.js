@@ -2,8 +2,10 @@ const express = require('express')
 
 const router = express.Router()
 
-const { browse} = require('../../../controllers/programsAction')
+const { browse, read} = require('../../../controllers/programsAction')
 
 router.get('/', browse)
+router.get("/:id", read);
+
 
 module.exports = router
